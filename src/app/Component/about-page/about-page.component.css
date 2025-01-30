@@ -1,0 +1,60 @@
+
+
+/* Code */
+
+:root {
+    --primary-blue: #0072A5;
+    --primary-orange: #FF6B1B;
+    --text-gray: #333333;
+}
+
+.connect-button {
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.about-section h1 {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: var(--text-gray);
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f5f5f5;
+    color: var(--primary-orange);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.locations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.location-title {
+    font-size: 2em;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.learn-more:hover{
+    background-color: #FF6B1B;
+}

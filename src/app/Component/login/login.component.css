@@ -1,0 +1,197 @@
+/* General container for the login page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: url('https://img.freepik.com/free-vector/realistic-white-monochrome-background_23-2148998030.jpg?semt=ais_hybrid') no-repeat center center/cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Card style for the login box */
+.login-card {
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  height: 570px;
+  max-width: 400px;
+}
+
+/* Title style */
+.login-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Description style */
+.login-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Button container */
+.login-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* General button styling */
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  background-color: #0056b3;
+}
+
+/* Icon inside buttons */
+.login-button img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Google button style */
+.google-login {
+  background-color: #db4437;
+}
+
+.google-login:hover {
+  background-color: #c23324;
+}
+
+/* Microsoft button style */
+.microsoft-login {
+  background-color: #2b579a;
+}
+
+.microsoft-login:hover {
+  background-color: #1d3d72;
+}
+
+/* Divider style */
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ccc;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* Email form container */
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Input fields for email and password */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Forgot password link */
+.forgot-password {
+  font-size: 14px;
+  text-align: center;
+}
+
+.forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Create account link */
+.create-account {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.create-account a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Success message */
+.success-message {
+  text-align: center;
+  margin-top: 20px;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  .login-card {
+      padding: 20px;
+      width: 90%;
+  }
+
+  .login-title {
+      font-size: 20px;
+  }
+
+  .login-description {
+      font-size: 14px;
+  }
+}

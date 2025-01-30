@@ -1,0 +1,79 @@
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #9fcddd;
+}
+
+a{
+  font-weight: lighter;
+  font-family: sans-serif;
+}
+
+
+.dropdown-menu.show {
+  display: block;
+}
+
+ul:hover{
+  background-color:#9fcddd;
+}
+
+
+/* For the dropdown-submenu items */
+.dropdown-submenu {
+  position: relative;
+ 
+}
+
+.dropdown-submenu .dropdown-menu {
+  display: none; /* Hide submenu by default */
+  position: absolute;
+  left: 100%; /* Position it to the right of the parent item */
+  top: 0;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block; /* Show submenu when hovering over the parent item */
+}
+
+
+/* Show the main dropdown menu when hovered */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  
+}
+
+/* Ensure nested submenus display correctly */
+
+.dropdown-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of elements onto the next line */
+  gap: 20px; /* Adds space between the blocks */
+}
+
+/* Style for each dropdown block to take up half the width of the container */
+.dropdown-container .dropdown {
+  flex: 1 1 calc(50% - 20px); /* Takes up 50% of the container, accounting for gap */
+  box-sizing: border-box; /* Ensures padding and border do not affect width */
+}
+
+/* Style for the second block below the dropdown */
+.dropdown-container .collapse-container {
+  flex: 1 1 100%; /* Ensures the div below takes full width */
+  box-sizing: border-box;
+  margin-top: 20px; /* Adds space between dropdowns and the second block */
+}
+
+/* Optional: Style for collapse functionality */
+.collapse-container .card {
+  padding: 20px;
+  background-color: #00A3E0;
+  border: 1px solid #ddd;
+}
+
+.dropdown-menu.show {
+  display: block;              /* Show dropdown when toggled */
+  
+}

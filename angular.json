@@ -24,10 +24,17 @@
               "src/favicon.ico",
               "src/assets"
             ],
+          
             "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+  "src/styles.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.slim.min.js",            
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3c5a4356-47a8-449e-9f4c-8d5c7e1df71a"
   }
 }

@@ -1,7 +1,24 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './Component/Internet/home.component';
+import { LoginComponent } from './Component/login/login.component';
+import { DynamicFormComponentComponent } from './Component/dynamic-form-component/dynamic-form-component.component';
+import { AboutPageComponent } from './Component/about-page/about-page.component';
+import { AppComponent1 } from './Component/app1/app.component';
+import { WelcomepageComponent } from './Component/welcomepage/welcomepage.component';
+import { PageComponent } from './Component/page/page.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  {path:'',redirectTo:'page',pathMatch:'full'},
+ { path:'internet', component:HomeComponent},
+ {path:'Login',component:LoginComponent},
+ {path:'Form',component:DynamicFormComponentComponent},
+ {path:'AboutPage',component:AboutPageComponent},
+ {path:'App1',component:AppComponent1},
+ {path:'welcome',component:WelcomepageComponent},
+ {path:'page',component:PageComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
