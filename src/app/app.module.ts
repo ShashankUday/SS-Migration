@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { AppComponent1 } from './Component/app1/app.component';
 import { RouterModule } from '@angular/router';
 import { PageComponent } from './Component/page/page.component';
+import { SecuredFileShareComponent } from './Forms/secured-file-share/secured-file-share.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PageComponent } from './Component/page/page.component';
     WelcomepageComponent,
     AppComponent1,
     PageComponent,
+    SecuredFileShareComponent,
   ],
   imports: [
     BrowserModule,

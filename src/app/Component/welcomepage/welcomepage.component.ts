@@ -41,4 +41,10 @@ export class WelcomepageComponent  implements OnInit, OnDestroy {
       this.router.navigate(['/Login']);
     }
   }
+  isDropdownVisible: boolean = false;
+
+  // Toggle dropdown visibility
+  toggleDropdown() {
+    this.isDropdownVisible = !this.isDropdownVisible;
+  }
 }
