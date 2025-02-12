@@ -64,25 +64,4 @@ export class AppComponent {
     //     // window.location.href = "about:blank"; // Example of redirecting away
     //   }
     // }
-
-  isLoggedIn: boolean = false;
-
-  constructor(private authService: AuthService, private router: Router) { }
- 
-  // Toggles the menu open/close state
-  // Method to toggle login/logout
-  toggleLoginLogout(): void {
-    if (this.isLoggedIn) {
-      this.authService.logout();  // Log out
-    } else {
-      this.router.navigate(['/Login']);  // Navigate to login page
-    }
-  }
-  toggleLoginLogout1(){
-    if (this.isLoggedIn) {
-      this.authService.logout();  // Log out
-    } else {
-      this.router.navigate(['/Login']);  // Navigate to login page
-    }
-  }
 }

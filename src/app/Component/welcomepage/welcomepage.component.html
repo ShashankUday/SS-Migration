@@ -10,10 +10,33 @@
                   <a href="https://x.com/conseroglobal" target="_blank" class="hover-opacity-80"><i class="fab fa-twitter"></i></a>
               </div>
               <div class="contact-info">
-                  <a href="tel:866.588.0495" class="hover-opacity-80">
+                  <!-- <a href="tel:866.588.0495" class="hover-opacity-80">
                       <i class="fas fa-phone"></i>
                       866.588.0495
+                  </a> -->
+                  <!-- //report and help buttons// -->
+                  <a class="nav-button" href="https://conseroglobal.sharepoint.com/sites/DForm/_layouts/15/listforms.aspx?cid=YjI2Yjc0OWQtOWJhYy00ZTcxLWIyNDMtNDg0MzJjY2I4MmEx&nav=YWIyNGUyODctYTRjMC00OGU0LTkwZGItYWIyOTA1ODBjOGNl" target="_blank">
+                    <span class="icon">⚠️</span>
+                    Report Abuse
                   </a>
+                <button class="nav-button" id="helpButton" (click)="toggleDropdown()">
+                    <span class="icon">❔</span>
+                    Help
+                </button>
+                <div class="dropdown-content" *ngIf="isDropdownVisible" id="helpDropdown">
+                    <a href="#" class="dropdown-item">
+                        <span class="icon">❔</span>
+                        Help and Learning
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <span class="icon">💡</span>
+                        Show Help Tips
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <span class="icon">🎧</span>
+                        Contact Us
+                    </a>
+                </div>
                   <div class="nav-right">
                       <ul class="loginout">
                           <!-- Show Login or Logout based on the user's login status -->
@@ -35,7 +58,7 @@
                   <!-- Internet -->
                   <div  class="nav-item">
                       <div *ngIf="isLoggedIn" class="nav-item">
-                          <a href="#" (click)="preventLogout()">Internet/Gdrive/OneDrive</a>
+                          <a href="#" (click)="preventLogout()">Useful Links</a>
                       </div>
                       <div  class="services-panel">
                           <div class="panel-content">
@@ -71,7 +94,7 @@
                           </div>
                       </div>
                   </div>
-                  <a href="#" class="connect-btn"  (click)="preventLogout()">
+                  <a href="https://conseroglobal.sharepoint.com/sites/ContactWithUs/_layouts/15/listforms.aspx?cid=Nzc2ZTEwMjktMmRjNS00MDBkLWEwODctMGE3MjQ1OTRlOWEz&nav=OTkwZDg3YTctOTM0ZS00YmE5LWFkYjktM2ZiNmU1MjUxNDll" target="_blank" class="connect-btn">
                       Connect With Us
                   </a>
               </div>
