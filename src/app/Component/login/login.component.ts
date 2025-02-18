@@ -78,6 +78,7 @@ export class LoginComponent  implements OnInit, OnDestroy{
   loginWithEmail(): void {
     this.validateEmail();
     this.validatePassword();
+    
     if (this.isEmailValid && this.isPasswordValid) {
       console.log('Login successful!');
       this.loginSuccess = true;
