@@ -7,9 +7,9 @@ import { LoginService } from 'src/app/Service/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent  implements OnInit, OnDestroy{
+export class LoginComponent implements OnInit, OnDestroy{
   authStatusSub: any;
-  constructor(private router: Router,private authService: AuthService ,private loginService:LoginService) {}
+  constructor(private router: Router,private authService: AuthService) {}
   @Output() loginSuccessEvent = new EventEmitter<boolean>();
   // Navigate to Welcome Page
   // navigateToWelcome() {
@@ -19,8 +19,7 @@ export class LoginComponent  implements OnInit, OnDestroy{
   sendAuthenticationCode() {
     alert('Authentication code sent to your email!');
   }
-  botEmail: string = 'shashank@conseroglobal.com';
-  botPassword: string = 'shashank';
+ 
   showEmailForm = false;
   email: string = '';
   password: string = '';
@@ -66,16 +65,33 @@ export class LoginComponent  implements OnInit, OnDestroy{
     this.isPasswordValid = this.password.length > 5;
   }
   loginWithEmail(): void {
-    // this.validateEmail();
-    // this.validatePassword();
-    if (this.email === this.botEmail && this.password === this.botPassword) {
-      // Proceed with login logic (e.g., navigate to dashboard)
+    // Mock user data: List of valid users
+    const mockUsers = [
+      { email: 'ravi@conseroglobal.com', password: '123456' },
+      { email: 'manny@conseroglobal.com', password: '123456' },
+      { email: 'nataraj@conseroglobal.com', password: '123456' },
+      { email: 'abrar@conseroglobal.com', password: '123456' },
+      { email: 'shashank@conseroglobal.com', password: '123456' },
+      { email: 'varun@conseroglobal.com', password: '123456' }
+    ];
+  
+    // Check if entered credentials match any user in the list
+    const validUser = mockUsers.find(user => user.email === this.email && user.password === this.password);
+  
+    if (validUser) {
       console.log('Login successful!');
+  
+      // Store user data in localStorage (or sessionStorage)
+      localStorage.setItem('user', JSON.stringify({ email: this.email, loggedIn: true }));
+  
+      // Mock auth service method
       this.authService.login();
+  
+      // Navigate to another page
       this.router.navigate(['/page']);
     } else {
-      // Show error message (e.g., display invalid credentials message)
-      console.log('Invalid email or password');
+      console.error('Login failed: Invalid credentials');
+      alert('Login failed: Invalid email or password');
     }
   }
 

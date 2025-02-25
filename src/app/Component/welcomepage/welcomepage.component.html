@@ -17,14 +17,14 @@
                   <!-- //report and help buttons// -->
                   <a class="nav-button" href="https://conseroglobal.sharepoint.com/sites/DForm/_layouts/15/listforms.aspx?cid=YjI2Yjc0OWQtOWJhYy00ZTcxLWIyNDMtNDg0MzJjY2I4MmEx&nav=YWIyNGUyODctYTRjMC00OGU0LTkwZGItYWIyOTA1ODBjOGNl" target="_blank">
                     <span class="icon">⚠️</span>
-                    Report Abuse
+                    Report Issue
                   </a>
                 <button class="nav-button" id="helpButton" (click)="toggleDropdown()">
                     <span class="icon">❔</span>
                     Help
                 </button>
                 <div class="dropdown-content" *ngIf="isDropdownVisible" id="helpDropdown">
-                    <a href="#" class="dropdown-item">
+                    <a href="/sharefs" class="dropdown-item">
                         <span class="icon">❔</span>
                         Help and Learning
                     </a>
@@ -54,7 +54,7 @@
           <nav class="main-nav">
               <img src="https://conseroglobal.com/wp-content/uploads/2020/11/Consero_Logo_dark.svg" class="logo">
               <div class="nav-links">
-                  <a href="/page"  (click)="preventLogout()">Home</a>
+                  <a href="" routerLink="/page"  (click)="preventLogout()">Home</a>
                   <!-- Internet -->
                   <div  class="nav-item">
                       <div *ngIf="isLoggedIn" class="nav-item">
